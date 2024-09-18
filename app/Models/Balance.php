@@ -7,5 +7,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class Balance extends Model
 {
-    use HasFactory;
+  use HasFactory;
+
+  public function cif()
+  {
+    return $this->belongsTo(Cif::class);
+  }
 }

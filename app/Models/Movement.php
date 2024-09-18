@@ -7,5 +7,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class Movement extends Model
 {
-    use HasFactory;
+  use HasFactory;
+
+  public function cif()
+  {
+    return $this->belongsTo(Cif::class);
+  }
 }

@@ -10,4 +10,12 @@ class Trust extends Model
 {
   use HasFactory, HasUuids;
 
+  public function enrollments()
+  {
+    return $this->hasMany(Enrollment::class);
+  }
+  public function cifs()
+  {
+    return $this->hasMany(Cif::class);
+  }
 }
