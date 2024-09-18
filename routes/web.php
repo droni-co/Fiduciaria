@@ -6,4 +6,6 @@ use Illuminate\Support\Facades\Auth;
 
 Auth::routes();
 
-Route::get('/', [DashboardController::class, 'home'])->name('home');
+Route::middleware(['auth'])->group(function () {
+  Route::get('/', [DashboardController::class, 'home'])->name('home');
+});
