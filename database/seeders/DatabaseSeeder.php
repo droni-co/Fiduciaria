@@ -10,7 +10,6 @@ use App\Models\Cif;
 use App\Models\Participation;
 use App\Models\Balance;
 use App\Models\Movement;
-// use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
