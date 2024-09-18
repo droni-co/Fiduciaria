@@ -8,5 +8,6 @@ use Illuminate\Database\Eloquent\Concerns\HasUuids;
 
 class Trust extends Model
 {
-    use HasFactory, HasUuids;
+  use HasFactory, HasUuids;
+
 }

@@ -7,5 +7,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class Enrollment extends Model
 {
-    use HasFactory;
+  use HasFactory;
+
+  public function trust()
+  {
+    return $this->belongsTo(Trust::class);
+  }
 }
