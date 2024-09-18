@@ -13,8 +13,8 @@ return new class extends Migration
   {
     Schema::create('cifs', function (Blueprint $table) {
       $table->uuid('id')->primary();
-      $table->unsignedInteger('code')->unique();
       $table->foreignUuid('trust_id')->constrained();
+      $table->unsignedBigInteger('code')->unique();
       $table->string('name');
       $table->boolean('active')->default(true);
       $table->timestamps();
