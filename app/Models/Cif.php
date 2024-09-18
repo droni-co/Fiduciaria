@@ -18,6 +18,10 @@ class Cif extends Model
   {
     return $this->hasMany(Balance::class);
   }
+  public function lastBalance()
+  {
+    return $this->balances()->orderBy('dateBanalce', 'desc')->first();
+  }
   public function movements()
   {
     return $this->hasMany(Movement::class);

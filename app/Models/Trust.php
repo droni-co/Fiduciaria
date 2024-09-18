@@ -18,4 +18,13 @@ class Trust extends Model
   {
     return $this->hasMany(Cif::class);
   }
+
+  public function totalBalance()
+  {
+    $total = 0;
+    foreach ($this->cifs as $cif) {
+      $total += $cif->lastBalance()->total ?? 0;
+    }
+    return $total;
+  }
 }
